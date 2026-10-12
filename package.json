@@ -1,0 +1,31 @@
+{
+  "name": "verify",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "사이트 전체 SEO·GEO 진단 CLI (로컬 개발 서버 지원)",
+  "bin": {
+    "verify": "bin/verify.js"
+  },
+  "engines": {
+    "node": ">=22.17.0"
+  },
+  "scripts": {
+    "audit": "tsx src/cli.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "browser:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "cheerio": "1.1.2",
+    "fast-xml-parser": "^5.0.0",
+    "ipaddr.js": "^2.2.0",
+    "jsonld": "9",
+    "playwright": "1.58.2",
+    "tsx": "^4.19.4"
+  },
+  "devDependencies": {
+    "@types/jsonld": "^1.5.15",
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3"
+  }
+}
